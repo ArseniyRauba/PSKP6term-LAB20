@@ -1,0 +1,13 @@
+body{
+font-family: Arial;
+margin: 40px;
+}
+
+a{
+display:block;
+padding:5px;
+border:1px solid gray;
+margin:3px;
+width:200px;
+text-decoration:none;
+}

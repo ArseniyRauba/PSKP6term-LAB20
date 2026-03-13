@@ -1,0 +1,33 @@
+<h2>Изменить запись</h2>
+
+{{#each phones}}
+<div>
+<a style="pointer-events:none;color:gray;">
+    {{name}} : {{phone}}
+</a>
+</div>
+{{/each}}
+
+<form method="POST" action="/Update">
+
+<input type="hidden" name="id" value="{{phone.id}}">
+
+<input id="editInput" name="name" value="{{phone.name}}">
+
+<input name="phone" value="{{phone.phone}}">
+
+<button type="submit">Изменить</button>
+
+</form>
+
+<form method="POST" action="/Delete">
+
+<input type="hidden" name="id" value="{{phone.id}}">
+
+<button id="deleteBtn">Удалить</button>
+
+</form>
+
+<a href="/">Отказаться</a>
+
+<script src="/js/script.js"></script>
