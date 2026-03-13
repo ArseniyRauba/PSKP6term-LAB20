@@ -1,9 +1,17 @@
-<h2>Список</h2>
+<div class="container">
+
+<h1>Телефонный справочник</h1>
+
+<div class="phone-list">
 
 {{#each phones}}
-    {{> phoneRow}}
+<a class="phone-row" href="/Update?id={{id}}">
+{{name}} <br> {{phone}}
+</a>
 {{/each}}
 
-<br>
+</div>
 
-<a href="/Add">Добавить</a>
+<a class="add-btn" href="/Add">Добавить</a>
+
+</div>

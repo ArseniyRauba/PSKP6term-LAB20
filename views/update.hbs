@@ -1,19 +1,22 @@
-<h2>Изменить запись</h2>
+<div class="container">
+
+<h1>Изменить запись</h1>
+
+<div class="phone-list">
 
 {{#each phones}}
-<div>
-<a style="pointer-events:none;color:gray;">
-    {{name}} : {{phone}}
+<a class="phone-row" style="pointer-events:none; opacity:0.6;">
+{{name}} <br> {{phone}}
 </a>
-</div>
 {{/each}}
+
+</div>
 
 <form method="POST" action="/Update">
 
 <input type="hidden" name="id" value="{{phone.id}}">
 
-<input id="editInput" name="name" value="{{phone.name}}">
-
+<input name="name" value="{{phone.name}}">
 <input name="phone" value="{{phone.phone}}">
 
 <button type="submit">Изменить</button>
@@ -24,10 +27,10 @@
 
 <input type="hidden" name="id" value="{{phone.id}}">
 
-<button id="deleteBtn">Удалить</button>
+<button type="submit">Удалить</button>
 
 </form>
 
-<a href="/">Отказаться</a>
+<a class="add-btn" href="/">Отказаться</a>
 
-<script src="/js/script.js"></script>
+</div>

@@ -1,21 +1,25 @@
-<h2>Добавить запись</h2>
+<div class="container">
+
+<h1>Добавить запись</h1>
+
+<div class="phone-list">
 
 {{#each phones}}
-<div>
-<a style="pointer-events:none;color:gray;">
-    {{name}} : {{phone}}
+<a class="phone-row" style="pointer-events:none; opacity:0.6;">
+{{name}} <br> {{phone}}
 </a>
-</div>
 {{/each}}
+
+</div>
 
 <form method="POST" action="/Add">
 
 <input name="name" placeholder="Имя">
-
 <input name="phone" placeholder="Телефон">
 
 <button type="submit">Добавить</button>
 
 </form>
+<a class="add-btn" href="/">Отказаться</a>
 
-<a href="/">Отказаться</a>
+</div>
