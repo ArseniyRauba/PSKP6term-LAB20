@@ -32,6 +32,11 @@ app.get("/", (req, res) => {
   res.render("index", { phones: data.phones });
 });
 
+app.get("/data", (req, res) => {
+  const data = readData();
+  res.json(data);
+});
+
 app.get("/Add", (req, res) => {
   const data = readData();
   res.render("add", { phones: data.phones });
