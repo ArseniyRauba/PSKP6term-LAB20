@@ -5,9 +5,7 @@
 <div class="phone-list">
 
 {{#each phones}}
-<a class="phone-row" href="/Update?id={{id}}">
-{{name}} <br> {{phone}}
-</a>
+{{> phoneRow}}
 {{/each}}
 
 </div>
