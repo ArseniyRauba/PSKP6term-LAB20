@@ -5,9 +5,7 @@
 <div class="phone-list">
 
 {{#each phones}}
-<a class="phone-row" style="pointer-events:none; opacity:0.6;">
-{{name}} <br> {{phone}}
-</a>
+{{> phoneRow}}
 {{/each}}
 
 </div>
@@ -16,8 +14,8 @@
 
 <input type="hidden" name="id" value="{{phone.id}}">
 
-<input name="name" value="{{phone.name}}">
-<input name="phone" value="{{phone.phone}}">
+<input id="name" name="name" value="{{phone.name}}">
+<input id="phone" name="phone" value="{{phone.phone}}">
 
 <button type="submit">Изменить</button>
 
@@ -27,10 +25,23 @@
 
 <input type="hidden" name="id" value="{{phone.id}}">
 
-<button type="submit">Удалить</button>
+<button id="deletebtn" type="submit">Удалить</button>
 
 </form>
 
 <a class="add-btn" href="/">Отказаться</a>
 
 </div>
+
+<script>
+    const nameInput = document.getElementById("name");
+    const phoneInput = document.getElementById("phone");
+    const deleteBtn = document.getElementById("deletebtn");
+
+    function disableDelete() {
+        deleteBtn.disabled = true;
+    }
+
+    nameInput.addEventListener("input", disableDelete);
+    phoneInput.addEventListener("input", disableDelete);
+</script>
