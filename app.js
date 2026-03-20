@@ -12,7 +12,8 @@ app.engine(
   "hbs",
   exphbs.engine({
     extname: "hbs",
-    defaultLayout: "main"
+    defaultLayout: "main",
+    partialsDir: "views/partials"
   })
 );
 
